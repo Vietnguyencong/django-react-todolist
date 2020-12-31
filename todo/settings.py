@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR , 'db.sqlite3'),
     }
 }
 
@@ -134,7 +134,7 @@ USE_TZ = True
 # name of static dir 
 STATIC_URL = '/static/'
 # tell django where to look for static file 
-STATICFILES_DIRS =   os.path.join(BASE_DIR, 'frontendreact/build/static')
+STATICFILES_DIRS =  [ os.path.join(BASE_DIR, 'frontendreact/build/static')] 
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000'

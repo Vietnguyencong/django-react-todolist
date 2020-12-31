@@ -48,9 +48,10 @@ h1, h2, h3, h4, h5, p, span, strike{
   font-family: 'Montserrat', sans-serif;
 
 }
-    .done {
-        text-decoration: line-through;
-    }
+
+.done {
+    text-decoration: line-through;
+}
 
 #task-container{
   max-width:600px;

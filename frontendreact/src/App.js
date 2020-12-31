@@ -182,8 +182,8 @@ class App extends React.Component {
           <div id="list-wrapper">
             {tasks.map((task, index) => {
               return (
-                <div key={index} className="task-wrapper flex-wrapper" onClick={()=> self.strikeUnstrike(task)}>
-                  <div style={{flex:6}}>
+                <div key={index} className="task-wrapper flex-wrapper" >
+                  <div style={{flex:6}} className="trike-part" onClick={()=> self.strikeUnstrike(task)}>
                     {task.completed == false?(
                       <span>{task.title}</span>
                     ):(
