@@ -183,18 +183,19 @@ class App extends React.Component {
             {tasks.map((task, index) => {
               return (
                 <div key={index} className="task-wrapper flex-wrapper" >
-                  <div style={{flex:6}} className="trike-part" onClick={()=> self.strikeUnstrike(task)}>
+                  <div style={{flex:6}} className="trike-part">
                     {task.completed == false?(
-                      <span>{task.title}</span>
+                      <span key="123" onClick={()=> self.strikeUnstrike(task)}>{task.title}</span>
                     ):(
-                      <strike>{task.title}</strike>
+                      <strike key="456" onClick={()=> self.strikeUnstrike(task)}>{task.title}</strike>
                     )}
                   </div>
+              
                   <div style={{flex:1}}>
                     <button className="btn btn-sm btn-outline-info" onClick={()=>self.startEdit(task)}>Edit</button>
                   </div>
                   <div style={{flex:1}}>
-                    <button className="btn btn-sm btn-outline-danger" onClick={()=> self.deleteItem(task)}>-</button>
+                    <button className="btn btn-sm btn-outline-danger" onClick={()=> self.deleteItem(task)}>Remove</button>
                   </div>
                 </div>
               )
